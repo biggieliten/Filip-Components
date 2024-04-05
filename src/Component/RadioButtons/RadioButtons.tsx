@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./sass/styles.scss";
 type RadioButtonsProps = {
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   selectedButton: string;
@@ -45,6 +45,8 @@ const RadioButtons: React.FC<RadioButtonsProps> = (props) => {
           </label>
         </form>
       </div>
+      {/*       <h1>{props.selectedButton}</h1>
+       */}{" "}
     </>
   );
 };

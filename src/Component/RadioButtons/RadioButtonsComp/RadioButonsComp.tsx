@@ -1,11 +1,12 @@
 import RadioButtons from "../RadioButtons";
 import { useState } from "react";
-import "../sass/styles.scss";
 
 const RadioButtonsComp: React.FC = () => {
-  const [selectedRadioOption, setSelectedRadioOption] = useState("Option1");
+  const [selectedRadioOption, setSelectedRadioOption] = useState("");
   const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedRadioOption(e.target.value);
+    /*     console.log(selectedRadioOption);
+     */
   };
 
   return (

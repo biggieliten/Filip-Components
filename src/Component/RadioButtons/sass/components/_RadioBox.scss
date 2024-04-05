@@ -7,7 +7,13 @@
     }
   }
 }
+
 label {
   font-weight: 600;
   color: $primary-text-color;
+  font-family: $primary-font;
+  font-weight: 500;
+  input:hover {
+    box-shadow: 0 0 0.15rem rgb(255, 255, 255);
+  }
 }
