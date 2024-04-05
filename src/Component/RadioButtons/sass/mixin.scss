@@ -1,0 +1,15 @@
+@mixin RadioBoxMixin {
+  display: flex;
+  flex-direction: row;
+
+  min-height: fit-content;
+  padding: 1.2rem;
+
+  background-color: $primary-background-color;
+  color: black;
+
+  border: 1px solid $primary-text-color;
+  border-radius: 1rem;
+}
+@mixin RadioFormMixin {
+}

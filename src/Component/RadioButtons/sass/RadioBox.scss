@@ -1,0 +1,13 @@
+.radioBox {
+  @include RadioBoxMixin;
+  .radioForm {
+    @include RadioFormMixin;
+    label {
+      padding: 0.5rem;
+    }
+  }
+}
+label {
+  font-weight: 600;
+  color: $primary-text-color;
+}
