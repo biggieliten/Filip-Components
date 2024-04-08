@@ -1,4 +1,4 @@
-import RadioButtonsComp from "./Component/RadioButtons/RadioButtonsComp/RadioButonsComp";
+import RadioButtonsComp from "./Component/RadioButtonsComp/RadioButonsComp";
 import "./App.css";
 
 function App() {

@@ -1,4 +1,4 @@
-import RadioButtons from "../RadioButtons";
+import RadioButtons from "./RadioButtons/RadioButtons";
 import { useState } from "react";
 
 const RadioButtonsComp: React.FC = () => {
