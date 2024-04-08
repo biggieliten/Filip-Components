@@ -1,10 +1,10 @@
-import RadioButtonsComp from "./Component/RadioButtonsComp/RadioButonsComp";
+import RadioButtonsGroup from "./Component/RadioButtonGroup/RadioButonGroup";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <RadioButtonsComp />
+      <RadioButtonsGroup />
     </>
   );
 }

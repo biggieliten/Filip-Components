@@ -1,0 +1,55 @@
+.radioBox {
+  @include RadioBoxMixin;
+  animation: ShakeIfActive 2s ease 0s 1 normal forwards;
+  .radioForm {
+    @include RadioFormMixin;
+    label {
+      padding: 0.5rem;
+    }
+    input:active {
+      animation: ShakeIfActive 2s ease 0s 1 normal forwards;
+    }
+  }
+}
+
+label {
+  font-weight: 600;
+  color: $primary-text-color;
+  font-family: $primary-font;
+  font-weight: 500;
+  input:hover {
+    box-shadow: 0 0 0.15rem rgb(255, 255, 255);
+  }
+}
+
+@keyframes ShakeIfActive {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  10% {
+    transform: rotate(8deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+
+  90% {
+    transform: rotate(8deg);
+  }
+}
