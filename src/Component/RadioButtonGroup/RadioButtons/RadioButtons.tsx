@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../sass/styles.scss";
 type RadioButtonsProps = {
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
