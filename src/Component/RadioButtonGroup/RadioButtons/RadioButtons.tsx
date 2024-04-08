@@ -1,30 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
+
 import "../sass/styles.scss";
-type RadioButtonsProps = {
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  selectedButton: string;
+
+// type RadioButtonsProps = {
+// 	optionsArray: any[]
+// selecterRadioOption: string;
+
+// 	// handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+// };
+
+type RadioProps = {
+  optionsArray: { name: string }[];
+  FormHeader: string;
 };
 
-const RadioButtonsArray = [
-  { name: "Option 1" },
-  { name: "Option 2" },
-  { name: "Option 3" },
-];
+const RadioButtons: React.FC<RadioProps> = ({ optionsArray, FormHeader }) => {
+  const [selectedRadioOption, setSelectedRadioOption] = useState("");
 
-const RadioButtons: React.FC<RadioButtonsProps> = (props) => {
+  const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedRadioOption(e.target.value);
+  };
   return (
     <>
-      {RadioButtonsArray.map((input) => (
-        <div>
-          <label htmlFor="">{input.name}</label>
-          <input
-            type="radio"
-            onChange={props.handleChange}
-            value={input.name}
-            checked={props.selectedButton === input.name}
-          />
-        </div>
-      ))}
+      <div className="radioBox">
+        <h2>{FormHeader}</h2>
+        <form className="radioForm">
+          {optionsArray.map((input) => (
+            <div>
+              <label htmlFor="">{input.name}</label>
+              <input
+                type="radio"
+                onChange={handleRadioChange}
+                value={input.name}
+                checked={selectedRadioOption === input.name}
+              />
+            </div>
+          ))}
+        </form>
+      </div>
+      {/* <h1>{selectedRadioOption}</h1> */}
     </>
   );
 };

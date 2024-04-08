@@ -3,11 +3,20 @@
   animation: ShakeIfActive 2s ease 0s 1 normal forwards;
   .radioForm {
     @include RadioFormMixin;
-    label {
-      padding: 0.5rem;
+    display: flex;
+    align-items: first baseline;
+    // position: absolute;
+
+    div {
+      display: flex;
+      align-items: center;
     }
-    input:active {
-      animation: ShakeIfActive 2s ease 0s 1 normal forwards;
+    label {
+      position: relative;
+    }
+    input {
+      position: absolute;
+      left: 7rem;
     }
   }
 }
