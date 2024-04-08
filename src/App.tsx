@@ -1,5 +1,5 @@
 import RadioButtons from "./Component/RadioButtonGroup/RadioButtons/RadioButtons";
-import "./App.css";
+import "./app.scss";
 import SearchBtn from "./Component/SearchBtn/SearchBtn";
 import Sidebar from "./Component/Sidebar/Sidebar";
 
