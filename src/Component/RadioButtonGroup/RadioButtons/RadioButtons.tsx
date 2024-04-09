@@ -11,6 +11,7 @@ import "../sass/styles.scss";
 
 type RadioProps = {
   optionsArray: { name: string }[];
+
   FormHeader: string;
 };
 
