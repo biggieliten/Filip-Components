@@ -1,3 +1,5 @@
+@use "./Component/RadioButtonGroup/sass/abstract/RadioColors";
+
 *,
 *::before,
 *::after {
@@ -7,6 +9,9 @@
 }
 
 #root {
-  //   background-color: $primary-background;
+  background-color: hotpink;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

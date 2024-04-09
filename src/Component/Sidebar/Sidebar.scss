@@ -12,11 +12,14 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 
+  position: fixed;
+  left: 0;
+
   &:hover,
   &.expanded {
     width: 20rem;
-    position: relative;
-
+    position: fixed;
+    left: 0;
     .sidebar ul {
       max-height: 100vh;
       padding: 1rem 0;

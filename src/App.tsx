@@ -6,7 +6,6 @@ import Toast from "./Component/Toast/Toast";
 
 import Sidebar from "./Component/Sidebar/Sidebar";
 
-
 function App() {
   const RadioButtonsArray = [
     { name: "Option 1" },
@@ -17,8 +16,8 @@ function App() {
   const items = ["Ägg", "Ägg", "Services", "Contact"];
   return (
     <>
-      <Sidebar items={items} />
       <RadioButtons FormHeader="Radio Group" optionsArray={RadioButtonsArray} />
+      <Sidebar items={items} />
       <SearchBtn />
       <Toast message="Success" type="success" />
       <Toast message="Error" type="error" />
