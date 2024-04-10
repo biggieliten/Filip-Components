@@ -1,0 +1,17 @@
+.animationButton {
+  width: 10rem;
+  height: 3rem;
+  background-color: green;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  &.border {
+    border: 2px black solid;
+  }
+
+  &:hover {
+    background-color: hotpink;
+    transition: background-color 1s;
+  }
+}

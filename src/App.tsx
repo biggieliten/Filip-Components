@@ -6,6 +6,7 @@ import Toast from "./Component/Toast/Toast";
 
 import Sidebar from "./Component/Sidebar/Sidebar";
 import DropDownMenu from "./Component/DropdownMenu/DropDownMenu";
+import AnimationButton from "./Component/AnimationButton/AnimationButton";
 
 // import { IoIosArrowDown } from "react-icons/io";
 
@@ -25,6 +26,7 @@ function App() {
   const items = ["Ägg", "Ägg", "Services", "Contact"];
   return (
     <>
+      <AnimationButton />
       <RadioButtons FormHeader="Radio Group" optionsArray={RadioButtonsArray} />
       <Sidebar items={items} />
       <DropDownMenu listOptions={DropdownMenuOptions} />
