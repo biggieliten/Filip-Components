@@ -3,18 +3,21 @@
 $primary-font: "Montserrat", sans-serif;
 
 .menuBox {
+  position: absolute;
+  top: 0.1rem;
+  right: 13rem;
   margin: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   //   border: 1px black solid;
+
   .menuButton {
     display: flex;
     justify-content: space-evenly;
-    // justify-self: center;
     align-items: center;
-    width: 7rem;
+    width: 5.5rem;
     height: 2rem;
     color: white;
     font-family: $primary-font;
@@ -23,29 +26,26 @@ $primary-font: "Montserrat", sans-serif;
     border-radius: 5px;
     border: none;
     margin: 1rem;
-    // position: inheri 	t;
 
     .menuButtonArrow {
       margin-top: 0.35rem;
       margin-left: 1rem;
-      &.inherit {
+      &.arrowUp {
         transform: rotate(180deg);
         animation: rotateUp 0.25s;
         margin-left: 1rem;
         margin-bottom: 0.6rem;
       }
-      &.rotated {
+      &.arrowDown {
         transform: rotate(360deg);
         animation: rotateDown 0.25s;
       }
     }
-    &.hide {
-      display: none;
-    }
+    // &.hide {
+    //   display: none;
+    // }
   }
   .optionBox {
-    animation: slidein 0.5s;
-
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 
@@ -58,10 +58,16 @@ $primary-font: "Montserrat", sans-serif;
     width: 100%;
 
     &.show {
-      display: flex;
+      animation: slideDown 0.7s;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.7s linear;
     }
     &.hide {
-      display: none;
+      animation: slideUp 0.7s;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s 0.7s, opacity 0.7s linear;
     }
     ul {
       list-style-type: none;
@@ -86,6 +92,36 @@ $primary-font: "Montserrat", sans-serif;
   }
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-30%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-30%);
+
+    // display: none;
+  }
+  0% {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+  90% {
+    transform: translateY(-30%);
+    opacity: 0%;
+    // display: none;
+  }
+  100% {
+    display: none;
+  }
+}
 @keyframes rotateUp {
   0% {
     transform: rotate(0deg);
@@ -124,14 +160,5 @@ $primary-font: "Montserrat", sans-serif;
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes slidein {
-  from {
-    transform: translateY(-30%);
-  }
-  to {
-    transform: translateY(0%);
   }
 }

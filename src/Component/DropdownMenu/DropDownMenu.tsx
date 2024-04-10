@@ -21,7 +21,9 @@ const DropDownMenu: React.FC<{ listOptions: menuProps[] }> = ({
         <button className="menuButton" onClick={hanleToggleMenu}>
           Menu
           <div
-            className={`menuButtonArrow ${toggleMenu ? "inherit" : "rotated"}`}
+            className={`menuButtonArrow ${
+              toggleMenu ? "arrowUp" : "arrowDown"
+            }`}
           >
             <IoIosArrowDown />
           </div>
