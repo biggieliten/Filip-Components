@@ -18,7 +18,10 @@ const DropDownMenu: React.FC<{ listOptions: menuProps[] }> = ({
   return (
     <>
       <div className="menuBox">
-        <button className="menuButton" onClick={hanleToggleMenu}>
+        <button
+          className={`menuButton ${toggleMenu ? " clicked" : ""}`}
+          onClick={hanleToggleMenu}
+        >
           Menu
           <div
             className={`menuButtonArrow ${
@@ -29,10 +32,10 @@ const DropDownMenu: React.FC<{ listOptions: menuProps[] }> = ({
           </div>
         </button>
         <div className={`optionBox ${toggleMenu ? "show" : "hide"} `}>
-          <ul className="">
+          <ul>
             {listOptions.map((option) => {
               return (
-                <li className={`${""}`}>
+                <li>
                   <a href="">{option.name}</a>
                 </li>
               );

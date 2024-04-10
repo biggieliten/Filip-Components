@@ -11,12 +11,27 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-
+  clip-path: polygon(
+    10% 25%,
+    35% 25%,
+    35% 0%,
+    65% 0%,
+    65% 25%,
+    90% 25%,
+    90% 50%,
+    65% 50%,
+    65% 100%,
+    35% 100%,
+    35% 50%,
+    10% 50%
+  );
+  transform: rotate(180%);
   position: fixed;
   left: 0;
 
   &:hover,
   &.expanded {
+    animation: spin 1s;
     width: 20rem;
     position: fixed;
     left: 0;
@@ -56,5 +71,14 @@
         }
       }
     }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
   }
 }

@@ -17,19 +17,25 @@ type RadioProps = {
 
 const RadioButtons: React.FC<RadioProps> = ({ optionsArray, FormHeader }) => {
   const [selectedRadioOption, setSelectedRadioOption] = useState("");
+  const [toggleAnimation, setToggleAnimation] = useState(false);
 
   const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedRadioOption(e.target.value);
+    setToggleAnimation(!toggleAnimation);
+    // setToggleAnimation(null);
   };
   return (
     <>
-      <div className="radioBox">
+      <div className={`radioBox ${toggleAnimation ? "animate" : ""}`}>
         <h2>{FormHeader}</h2>
         <form className="radioForm">
           {optionsArray.map((input) => (
             <div>
               <label htmlFor="">{input.name}</label>
               <input
+                className={`radioInput ${
+                  toggleAnimation ? "clicked" : "unclicked"
+                }`}
                 type="radio"
                 onChange={handleRadioChange}
                 value={input.name}
