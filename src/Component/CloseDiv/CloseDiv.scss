@@ -1,0 +1,16 @@
+.closeThisBox {
+  width: 10rem;
+  height: 10rem;
+  background-color: rgb(0, 0, 83);
+}
+
+.close {
+  display: none;
+}
+
+.closeButton {
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}

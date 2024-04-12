@@ -36,6 +36,12 @@
 
         margin: 1rem 1rem 1rem 5rem;
       }
+      input[type="radio"]:checked {
+        background-color: black;
+        color: black;
+        accent-color: rgb(70, 0, 117);
+        animation: ShakeIfActive 2s;
+      }
     }
   }
 }
